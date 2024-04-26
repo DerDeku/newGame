@@ -1,0 +1,48 @@
+{
+  "Assassin": {
+    "Assassin Rune": {
+      "type": "class",
+      "rarity" : "UNCOMMON",
+      "abilities": [
+        "Lotus strike",
+        "Spider venom",
+        "Execute"
+      ]
+    },
+    "Thief Rune": {
+      "type": "class",
+      "rarity" : "COMMON",
+      "abilities": [
+        "silent stab",
+        "cloaked dagger"
+      ]
+    },
+    "starter combo Rune": {
+      "type": "random",
+      "tags": ["combo", "I", "II"]
+    },
+    "Finishing Dagger Rune": {
+      "type": "random",
+      "tags": ["finisher", "dagger"]
+    }
+  },
+  "warrior": {
+    "Warrior Rune": {
+      "type": "class",
+      "abilities": [
+        "Slash",
+        "Shield Bash"
+      ]
+    }
+  },
+  "mage": {
+    "Mage Rune": {
+      "type": "class",
+      "abilities": [
+        "Fireball",
+        "Fireburst",
+        "Freeze"
+      ]
+    }
+  }
+}

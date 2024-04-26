@@ -1,0 +1,119 @@
+{
+    "Assassin": 
+    {
+        "Lotus strike": 
+        {
+            "description": "Basic dagger combo starter",
+            "combo": 1,
+            "damage": 10,
+            "cooldown": 3,
+            "tags": ["combo", "I", "dagger"]
+        },
+        "Spider venom": 
+        {
+            "description": "Poison attack II",
+            "combo": 2,
+            "damage": 5,
+            "poison_duration": 4,
+            "poison_damage": 2,
+            "effects": 
+                {
+                "type": ["apply debuff"],
+                "debuff": ["posion"]
+                },
+            "tags": ["combo", "poison", "II", "dagger"]
+        },
+        "Silent Stab": {
+            "description": "Basic dagger combo starter",
+            "combo": 1,
+            "damage": 8,
+            "cooldown": 2,
+            "effects": {
+                "type": ["sneak attack", "apply debuff"],
+                "multiplicator": "1.5",
+                "debuff": "surprised",
+                "duration": 1
+            },
+            "tags": ["sneak attack", "combo", "I", "multiplicator", "dagger"]
+        },
+        "Cloaked Dagger": {
+            "description": "If enemy is surprised, deal extra damage",
+            "combo": 1,
+            "damage": 8,
+            "cooldown": 2,
+            "effects": {
+                "type": ["condition"],
+                "condition": ["surprised"],
+                "action": "buff",
+                "buff": "empowered",
+                "duration": 1
+            },
+            "tags": ["condition", "buff", "empowered", "surprised", "dagger"]
+        },
+        "Execute": {
+            "description": "slashing finisher",
+            "combo": 0,
+            "detailed_description": "The higher the combo level, the more damage",
+            "damage": 10,
+            "multiplicator": 5,
+            "effects": {
+                "type": ["finisher"]
+            },
+            "tags": ["combo", "finisher", "dagger"]
+        },
+        "Painfull purge": {
+            "description": "deal damage per poison stack on enemy",
+            "effects": {
+                "type": ["condition"],
+                "condition": ["poisoned"],
+                "action": ["deal_remaining_damage"]
+            },
+            "tags": ["poison", "condition", "dagger"]
+        }
+    },
+    "warrior": {
+        "Slash": {
+            "description": "Basic melee attack",
+            "damage": 10,
+            "cost": 5,
+            "tags": ["melee"]
+        },
+        "Shield Bash": {
+            "description": "Stun the enemy",
+            "cost": 5,
+            "effects": {
+                "type": ["apply debuff"],
+                "debuff": ["stun"],
+                "duration": 2
+            },
+            "tags": ["melee", "stun", "shield"]
+        }
+    },
+    "mage": {
+        "Fireball": {
+            "description": "Launch a fireball",
+            "damage": 5,
+            "burn_duration": 3,
+            "burn_damage": 5,
+            "cost": 10,
+            "tags": ["fire", "projectile"]
+        },
+        "Fireburst": {
+            "description": "Burst the enemy",
+            "damage": 5,
+            "cost": 10,
+            "effects": {
+                "type": ["condition"],
+                "condition": ["burning"],
+                "action": "multiply_damage"
+            },
+            "tags": ["fire", "condition", "burning"]
+        },
+        "Freeze": {
+            "description": "Freeze the enemy",
+            "freeze_duration": 3,
+            "cost": 5,
+            "tags": ["water", "freeze"]
+        }
+    }
+}
